@@ -52,12 +52,6 @@ int main() {
 	
 	
 	f = fopen("noten.csv", "r");
-	
-
-
-
-
-
 
 
 	return 0; 
