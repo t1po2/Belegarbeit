@@ -40,7 +40,7 @@ int main() {
 	FILE* f = fopen("noten.csv", "r");
 
 	if (f == NULL) {
-		f = fopen("oten.csv", "w");
+		f = fopen("noten.csv", "w");
 		if (f != NULL) {
 			fprintf(f, "ID, Name, Vorname, Noten");
 			fclose(f);
