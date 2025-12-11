@@ -15,22 +15,6 @@ typedef struct {
 
 
 
-//void datei_r(FILE* datei) {
-//
-//	schueler_t personen[max_schueler];
-//
-//
-//	char erste_zeile[200];
-//	datei = fopen(datei, "r");
-//	fgets(erste_zeile, sizeof(erste_zeile), datei);
-//
-//
-//	while (fscanf(datei, "%f, %29s %29s,%f ") == 4) {
-//		printf(" %f, %29s %29s,%f");
-//	}
-//
-//
-//}
 
 
 
@@ -55,28 +39,32 @@ int main() {
 	}
 
 	fclose(f);
-	
-
-	
 
 
 
-	
-	//opens File to read  data
+
+
+
 	
 	f = fopen("noten.csv", "r");
 
 	char erste_zeile[200];
 	fgets(erste_zeile, sizeof(erste_zeile), f);
 
-
-	printf("ID, Name Nachname, Note\n");
-	for (int i = 0; i < max_schueler; i++) {
-		if (fscanf(f, "%d, %[^,], %[^,], %d", &schueler[i].id, schueler[i].name, schueler[i].nachname, &schueler[i].note) == 4) {
-			printf("%d, %s %s, %d\n", schueler[i].id, schueler[i].name, schueler[i].nachname, schueler[i].note);
+	//anzeigen der Daten
+	//printf("ID, Name Nachname, Note\n");
+		for (int i = 0; i < max_schueler; i++) {
+			if (fscanf(f, "%d, %[^,], %[^,], %d", &schueler[i].id, schueler[i].name, schueler[i].nachname, &schueler[i].note) == 4) {
+				printf("%d, %s %s, %d\n", schueler[i].id, schueler[i].name, schueler[i].nachname, schueler[i].note);
+			}
 		}
-	}
 	fclose(f);
+
+
+	
+
+	
+
 
 
 
