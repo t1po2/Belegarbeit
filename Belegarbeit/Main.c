@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define max_schueler 50
 #include <stdio.h>
+#include "header.h"
 
 
 
@@ -42,17 +43,12 @@ int main() {
 
 
 
-
-
-
-	
 	f = fopen("noten.csv", "r");
 
 	char erste_zeile[200];
 	fgets(erste_zeile, sizeof(erste_zeile), f);
 
-	//anzeigen der Daten
-	//printf("ID, Name Nachname, Note\n");
+
 		for (int i = 0; i < max_schueler; i++) {
 			if (fscanf(f, "%d, %[^,], %[^,], %d", &schueler[i].id, schueler[i].name, schueler[i].nachname, &schueler[i].note) == 4) {
 				printf("%d, %s %s, %d\n", schueler[i].id, schueler[i].name, schueler[i].nachname, schueler[i].note);
@@ -60,10 +56,41 @@ int main() {
 		}
 	fclose(f);
 
+	menu_auswahl;
+
+	printf("Auswahl: %d",menu_auswahl());
+
 
 	
 
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,1 @@
-#pragma once
-#include <stdio.h>
-
+int menu_auswahl();
