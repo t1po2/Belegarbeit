@@ -1,4 +1,3 @@
-
 #define _CRT_SECURE_NO_WARNINGS
 #define max_schueler 50
 #include <stdio.h>
@@ -54,8 +53,9 @@ int main() {
 			fclose(f);
 		}
 	}
-	
+
 	fclose(f);
+	
 
 	
 
@@ -68,12 +68,11 @@ int main() {
 
 
 	char erste_zeile[200];
-	f = fopen(f, "r");
 	fgets(erste_zeile, sizeof(erste_zeile), f);
 
 	for (int i = 0; i < max_schueler; i++) {
-		while (fscanf(f, "%d, %29[^,] %29[^,], %d", &schueler[i].id, schueler[i].name, schueler[i].nachname, &schueler[i].note) == 4) {
-
+		if (fscanf(f, "%d, %29[^,], %29[^,], %d", &schueler[i].id, schueler[i].name, schueler[i].nachname, &schueler[i].note) == 4) {
+			printf("%d, %29s %29s, %d\n", schueler[i].id, schueler[i].name, schueler[i].nachname, schueler[i].note);
 		}
 	}
 	fclose(f);
