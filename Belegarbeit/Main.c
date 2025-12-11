@@ -3,22 +3,6 @@
 #include <stdio.h>
 #include "header.h"
 
-
-
-
-typedef struct {
-	int id;
-	char name[30];
-	char nachname[30];
-	int note;
-}schueler_t;
-
-
-
-
-
-
-
 int main() {
 
 
