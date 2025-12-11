@@ -123,8 +123,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Functions.c" />
+    <ClCompile Include="hinzufügen.c" />
+    <ClCompile Include="Menü_einblenden.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Filechecker.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />
