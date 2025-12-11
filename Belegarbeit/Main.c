@@ -5,48 +5,18 @@
 int main() {
 
 	//checks if file exist, if not it will be created
-	startup();
-	
-
-	menu_auswahl;
-
-	printf("Auswahl: %d",menu_auswahl());
+	file_check();
 
 
-	
-
-	
-
-
-
+	int menu_zahl = menu_auswahl();
+	if (menu_zahl == 1) {
+		add_schueler();
+	}
 
 
+		
 
 
+	return 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	return 0; 
-
-}//testttt
+}

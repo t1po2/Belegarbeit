@@ -16,3 +16,4 @@ schueler_t schueler[max_schueler];
 
 int menu_auswahl();
 void file_check();
+void add_schueler();

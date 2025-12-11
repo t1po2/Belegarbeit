@@ -1,29 +1,44 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "header.h"
 
 
 
-void schueler_hinzufügen(schueler_t schueler[max_schueler]) {
+void add_schueler() {
+	int new_adds;
+	int x = 0;
+	printf("Wie viele moechten sie hinzufuegen?\n");
+
+	scanf("%d", &new_adds);
 
 
-	for (int i = 0; i < max_schueler;i++) {
-		if (schueler[i].id != i) {
+	//Todesblock
+	for (int j = 0; j < max_schueler; j++) {
+		if (schueler[j].id == 0) {
 			printf("Name:\n");
-			scanf_s("%29s", schueler[i].name);
+			scanf("%29s", schueler[j].name);
 			printf("Nachname:\n");
-			scanf_s("%29s", schueler[i].nachname);
+			scanf("%29s", schueler[j].nachname);
 			printf("Note:\t");
-			scanf_s("%d", schueler[i].note);
-			schueler[i].id = i;
+			scanf("%d", &schueler[j].note);
+			schueler[j].id = j+1;
+			x = x+1;
+			if (x == new_adds) {
+				break;
+			}
 		}
 	}
 
+	FILE* f = fopen("noten.csv", "w");
 
-	FILE* f=fopen("noten.csv", "a");
+	for (int i = 0; i < max_schueler; i++) {
+		if (schueler[i].id != 0) {
+			fprintf(f, "%d, %s, %s, %d\n", schueler[i].id, schueler[i].name, schueler[i].nachname, schueler[i].note);
+		}
+	}
+	fclose(f);
+}
 
-	fprintf(f,"")
 
 
 	
-
-}
