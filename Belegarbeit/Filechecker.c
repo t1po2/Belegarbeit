@@ -19,7 +19,7 @@ void file_check() {
 
 
 
-	printf("ID, Name Nachname, Note\n");
+	printf("ID | Name  Nachname | Note\n");
 	for (int i = 0; i < max_schueler; i++) {
 		if (fscanf(f, "%d, %[^,], %[^,], %d", &schueler[i].id, schueler[i].name, schueler[i].nachname, &schueler[i].note) == 4) {
 			printf("%d, %s %s, %d\n", schueler[i].id, schueler[i].name, schueler[i].nachname, schueler[i].note);

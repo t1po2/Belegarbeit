@@ -18,6 +18,21 @@
     <ClCompile Include="Main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="hinzufügen.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Filechecker.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="loeschen.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="print_daten.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">

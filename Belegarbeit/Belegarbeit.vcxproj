@@ -123,8 +123,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="print_daten.c" />
     <ClCompile Include="hinzufügen.c" />
-    <ClCompile Include="Menü_einblenden.c" />
+    <ClCompile Include="loeschen.c" />
+    <ClCompile Include="Menu.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="Filechecker.c" />
   </ItemGroup>

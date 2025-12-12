@@ -12,7 +12,7 @@ void add_schueler() {
 	scanf("%d", &new_adds);
 
 
-	//Todesblock
+	//neue Daten ins Array
 	for (int j = 0; j < max_schueler; j++) {
 		if (schueler[j].id == 0) {
 			printf("Name:\n");
@@ -27,16 +27,12 @@ void add_schueler() {
 				break;
 			}
 		}
+			
+		
 	}
 
-	FILE* f = fopen("noten.csv", "w");
-
-	for (int i = 0; i < max_schueler; i++) {
-		if (schueler[i].id != 0) {
-			fprintf(f, "%d, %s, %s, %d\n", schueler[i].id, schueler[i].name, schueler[i].nachname, schueler[i].note);
-		}
-	}
-	fclose(f);
+	
+	print_daten();
 }
 
 
